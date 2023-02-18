@@ -1,7 +1,14 @@
 # 3D Graph Loader App
 An app that can draw 3D models by loading, rendering and manipulating 3D scenes created using both JavaScript and GLSL. 
 
-[Application Showcase]() 
+### Application Showcase
+[Video Showcase]() 
+
+![preview img](/phong.png)
+
+![preview img](/normals.png)
+
+![preview img](/textured.png)
 
 ### This project fulfills the following requirements:
 * Load OBJs with normal data and texture coordinates.
