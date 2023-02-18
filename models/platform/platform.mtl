@@ -1,0 +1,15 @@
+# Blender 3.3.1 MTL File: 'None'
+# www.blender.org
+
+newmtl platform_material
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 175.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd basecolor.jpg
+map_Ns roughness.jpg
+map_Bump -bm 1.000000 normal.jpg
