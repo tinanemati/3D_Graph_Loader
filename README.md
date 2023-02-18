@@ -16,7 +16,7 @@ An app that can draw 3D models by loading, rendering and manipulating 3D scenes 
 * Have a Texture class to load image data and set up GL textures.
 * Provide correct color, roughness and normal mapping.
 
-## There are roughly three tasks done in this project
+## There were roughly three tasks done in this project
 CPU Code (JS)
 1. Combining vertex data into a single buffer and writing the VAO setup for ShadedOjbect3D to accommodate a mixed vertex buffer containing positions, normals, texture coordinates, and vertex tangents. 
 
