@@ -1,0 +1,68 @@
+{
+    "models": [
+        {
+            "name": "stanford-bunny",
+            "obj": "./models/stanford-bunny/stanford-bunny.obj"
+        }
+    ],
+    "lights": [
+        {
+            "name": "ambient1",
+            "type": "ambient",
+            "color": "#FFAABB",
+            "intensity": 0.1
+        },
+        {
+            "name": "directional1",
+            "type": "directional",
+            "color": "#FFFFCC",
+            "intensity": 1.0
+        },
+        {
+            "name": "point1",
+            "type": "point",
+            "color": "#f56d40",
+            "intensity": 5.0
+        }
+    ],
+    "scenegraph": {
+        "name": "model_node",
+        "type": "model",
+        "content": "stanford-bunny",
+        "transformation": {
+            "translation": [0, 0, 0],
+            "rotation": [0, 180, 0],
+            "scale": [1, 1, 1]
+        },
+        "children": [
+            {
+                "name": "lights_node",
+                "type": "node",
+                "children": [
+                    {
+                        "name": "ambientlight1",
+                        "type": "light",
+                        "content": "ambient1"
+                    },
+                    {
+                        "name": "directionallight1",
+                        "type": "light",
+                        "content": "directional1",
+                        "transformation": {
+                            "translation": [0, 0, 1.5],
+                            "rotation": [90,0,90]
+                        }
+                    },
+                    {
+                        "name": "pointlight1",
+                        "type": "light",
+                        "content": "point1",
+                        "transformation": {
+                            "translation": [-2, 1, -0.75]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

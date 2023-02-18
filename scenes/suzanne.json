@@ -1,0 +1,82 @@
+{
+    "models": [
+        {
+            "name": "suzanne",
+            "obj": "./models/suzanne/suzanne.obj"
+        }
+    ],
+    "lights": [
+        {
+            "name": "ambient1",
+            "type": "ambient",
+            "color": "#FFAABB",
+            "intensity": 0.1
+        },
+        {
+            "name": "directional1",
+            "type": "directional",
+            "color": "#FFFFCC",
+            "intensity": 2.0
+        },
+        {
+            "name": "point1",
+            "type": "point",
+            "color": "#F5A340",
+            "intensity": 10.0
+        },
+        {
+            "name": "point2",
+            "type": "point",
+            "color": "#4287c8",
+            "intensity": 2.0
+        }
+    ],
+    "scenegraph": {
+        "name": "model_node",
+        "type": "model",
+        "content": "suzanne",
+        "transformation": {
+            "translation": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+        },
+        "children": [
+            {
+                "name": "lights_node",
+                "type": "node",
+                "children": [
+                    {
+                        "name": "ambientlight1",
+                        "type": "light",
+                        "content": "ambient1"
+                    },
+                    {
+                        "name": "directionallight1",
+                        "type": "light",
+                        "content": "directional1",
+                        "transformation": {
+                            "translation": [-1.5, 0, 0],
+                            "rotation": [0,0,90]
+                        }
+                    },
+                    {
+                        "name": "pointlight1",
+                        "type": "light",
+                        "content": "point1",
+                        "transformation": {
+                            "translation": [1.5, 1.5, 1.5]
+                        }
+                    },
+                    {
+                        "name": "pointlight2",
+                        "type": "light",
+                        "content": "point2",
+                        "transformation": {
+                            "translation": [1.5, 0.75, -1]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

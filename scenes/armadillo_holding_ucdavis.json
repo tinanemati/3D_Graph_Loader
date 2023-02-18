@@ -1,0 +1,175 @@
+{
+    "models": [
+        {
+            "name": "armadillo",
+            "obj": "./models/armadillo/armadillo.obj"
+        },
+        {
+            "name": "ucdavis",
+            "obj": "./models/ucd_logo/ucd_logo.obj"
+        },
+        {
+            "name": "platform",
+            "obj": "./models/platform/platform.obj"
+        }
+    ],
+    "lights": [
+        {
+            "name": "ambient1",
+            "type": "ambient",
+            "color": "#FFAABB",
+            "intensity": 0.1
+        },
+        {
+            "name": "directional1",
+            "type": "directional",
+            "color": "#FFFFCC",
+            "intensity": 1.0
+        },
+        {
+            "name": "point1",
+            "type": "point",
+            "color": "#F5A340",
+            "intensity": 4.0
+        },
+        {
+            "name": "point2",
+            "type": "point",
+            "color": "#cfd7e6",
+            "intensity": 1.0
+        }
+    ],
+    "scenegraph": {
+        "name": "root",
+        "type": "node",
+        "transformation": {
+            "translation": [
+                0,
+                0,
+                0
+            ],
+            "rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ]
+        },
+        "children": [
+            {
+                "name": "lights_node",
+                "type": "node",
+                "children": [
+                    {
+                        "name": "ambientlight1",
+                        "type": "light",
+                        "content": "ambient1"
+                    },
+                    {
+                        "name": "directionallight1",
+                        "type": "light",
+                        "content": "directional1",
+                        "transformation": {
+                            "translation": [-1.5, 0, 0],
+                            "rotation": [25,25,90]
+                        }
+                    },
+                    {
+                        "name": "pointlight1",
+                        "type": "light",
+                        "content": "point1",
+                        "transformation": {
+                            "translation": [0.25, 1.5, -1.5]
+                        }
+                    },
+                    {
+                        "name": "pointlight2",
+                        "type": "light",
+                        "content": "point2",
+                        "transformation": {
+                            "translation": [0.75, -0.75, -1.5]
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "platforn_node",
+                "type": "model",
+                "content": "platform",
+                "transformation": {
+                    "translation": [
+                        0,
+                        -1,
+                        0
+                    ],
+                    "rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "children": []
+            },
+            {
+                "name": "armadillo_node",
+                "type": "model",
+                "content": "armadillo",
+                "transformation": {
+                    "translation": [
+                        0.032400671392679214,
+                        -0.08804865181446075,
+                        0.20748820900917053
+                    ],
+                    "rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "children": [
+                    {
+                        "name": "ucdavis_node",
+                        "type": "model",
+                        "content": "ucdavis",
+                        "transformation": {
+                            "translation": [
+                                -0.11373203992843628,
+                                0.7791299223899841,
+                                -0.8995022177696228
+                            ],
+                            "rotation": [
+                                -0.043568526881153216,
+                                0.9950363988887098,
+                                0.07914209400629854,
+                                0.04172382176341469
+                            ],
+                            "scale": [
+                                0.6671538136222561,
+                                0.6671534888210042,
+                                0.6671539007373902
+                            ]
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

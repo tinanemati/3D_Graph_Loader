@@ -1,0 +1,68 @@
+{
+    "models": [
+        {
+            "name": "max-planck",
+            "obj": "./models/max-planck/max-planck.obj"
+        }
+    ],
+    "lights": [
+        {
+            "name": "ambient1",
+            "type": "ambient",
+            "color": "#FFAABB",
+            "intensity": 0.25
+        },
+        {
+            "name": "point2",
+            "type": "point",
+            "color": "#8ca9ed",
+            "intensity": 4.5
+        },
+        {
+            "name": "point1",
+            "type": "point",
+            "color": "#f56d40",
+            "intensity": 5.0
+        }
+    ],
+    "scenegraph": {
+        "name": "model_node",
+        "type": "model",
+        "content": "max-planck",
+        "transformation": {
+            "translation": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+        },
+        "children": [
+            {
+                "name": "lights_node",
+                "type": "node",
+                "children": [
+                    {
+                        "name": "ambientlight1",
+                        "type": "light",
+                        "content": "ambient1"
+                    },
+                    {
+                        "name": "pointlight2",
+                        "type": "light",
+                        "content": "point2",
+                        "transformation": {
+                            "translation": [-1.5, 0, 0],
+                            "rotation": [90,-90,0]
+                        }
+                    },
+                    {
+                        "name": "pointlight1",
+                        "type": "light",
+                        "content": "point1",
+                        "transformation": {
+                            "translation": [2, 1, -0.75]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

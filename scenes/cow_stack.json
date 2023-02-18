@@ -1,0 +1,168 @@
+{
+    "models": [
+        {
+            "name": "cow",
+            "obj": "./models/cow/cow.obj"
+        }
+    ],
+    "lights": [
+        {
+            "name": "ambient1",
+            "type": "ambient",
+            "color": "#FFAABB",
+            "intensity": 0.1
+        },
+        {
+            "name": "directional1",
+            "type": "directional",
+            "color": "#FFFFCC",
+            "intensity": 1.0
+        },
+        {
+            "name": "point1",
+            "type": "point",
+            "color": "#F5A340",
+            "intensity": 5.0
+        },
+        {
+            "name": "point2",
+            "type": "point",
+            "color": "#4287c8",
+            "intensity": 2.0
+        }
+    ],
+    "scenegraph": {
+        "name": "root",
+        "type": "node",
+        "transformation": {
+            "translation": [
+                0,
+                0,
+                0
+            ],
+            "rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ]
+        },
+        "children": [
+            {
+                "name": "lights_node",
+                "type": "node",
+                "children": [
+                    {
+                        "name": "ambientlight1",
+                        "type": "light",
+                        "content": "ambient1"
+                    },
+                    {
+                        "name": "directionallight1",
+                        "type": "light",
+                        "content": "directional1",
+                        "transformation": {
+                            "translation": [-1.5, 0, -1.5],
+                            "rotation": [90,150,180]
+                        }
+                    },
+                    {
+                        "name": "pointlight1",
+                        "type": "light",
+                        "content": "point1",
+                        "transformation": {
+                            "translation": [1, 1, 1]
+                        }
+                    },
+                    {
+                        "name": "pointlight2",
+                        "type": "light",
+                        "content": "point2",
+                        "transformation": {
+                            "translation": [1, -0.25, -1]
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "big_cow_node",
+                "type": "model",
+                "content": "cow",
+                "transformation": {
+                    "translation": [
+                        0.02770835906267166,
+                        -0.23248988389968872,
+                        0.1199951022863388
+                    ],
+                    "rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "children": [
+                    {
+                        "name": "medium_cow_node",
+                        "type": "model",
+                        "content": "cow",
+                        "transformation": {
+                            "translation": [
+                                -0.0744030773639679,
+                                0.640876829624176,
+                                -0.03958244249224663
+                            ],
+                            "rotation": [
+                                0,
+                                0,
+                                0,
+                                1
+                            ],
+                            "scale": [
+                                0.6058207750320435,
+                                0.6058207750320435,
+                                0.6058207750320435
+                            ]
+                        },
+                        "children": [
+                            {
+                                "name": "small_cow_node",
+                                "type": "model",
+                                "content": "cow",
+                                "transformation": {
+                                    "translation": [
+                                        -0.143990620970726,
+                                        0.5922694802284241,
+                                        -0.05994115769863129
+                                    ],
+                                    "rotation": [
+                                        0,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "scale": [
+                                        0.5365747213363647,
+                                        0.5365747213363647,
+                                        0.5365747213363647
+                                    ]
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

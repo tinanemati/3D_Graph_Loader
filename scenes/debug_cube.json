@@ -1,0 +1,68 @@
+{
+    "models": [
+        {
+            "name": "cube",
+            "obj": "./models/cube/cube.obj"
+        }
+    ],
+    "lights": [
+        {
+            "name": "ambient1",
+            "type": "ambient",
+            "color": "#FFFFFF",
+            "intensity": 0.5
+        },
+        {
+            "name": "directional1",
+            "type": "directional",
+            "color": "#ffe7d4",
+            "intensity": 1.0
+        },
+        {
+            "name": "point1",
+            "type": "point",
+            "color": "#fff5d4",
+            "intensity": 5.0
+        }
+    ],
+    "scenegraph": {
+        "name": "model_node",
+        "type": "model",
+        "content": "cube",
+        "transformation": {
+            "translation": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.8, 0.8, 0.8]
+        },
+        "children": [
+            {
+                "name": "lights_node",
+                "type": "node",
+                "children": [
+                    {
+                        "name": "ambientlight1",
+                        "type": "light",
+                        "content": "ambient1"
+                    },
+                    {
+                        "name": "directionallight1",
+                        "type": "light",
+                        "content": "directional1",
+                        "transformation": {
+                            "translation": [0, 0, -2.0],
+                            "rotation": [-90,0,0]
+                        }
+                    },
+                    {
+                        "name": "pointlight1",
+                        "type": "light",
+                        "content": "point1",
+                        "transformation": {
+                            "translation": [2.0, 2.0, 0.5]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

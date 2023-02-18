@@ -1,0 +1,453 @@
+{
+    "models": [
+        {
+            "name": "platform",
+            "obj": "./models/platform/platform.obj"
+        },
+        {
+            "name": "armadillo",
+            "obj": "./models/armadillo/armadillo.obj"
+        },
+        {
+            "name": "happy",
+            "obj": "./models/happy/happy.obj"
+        }
+    ],
+    "lights": [
+        {
+            "name": "ambient1",
+            "type": "ambient",
+            "color": "#FFAABB",
+            "intensity": 0.1
+        },
+        {
+            "name": "directional1",
+            "type": "directional",
+            "color": "#FFFFCC",
+            "intensity": 1.0
+        },
+        {
+            "name": "point1",
+            "type": "point",
+            "color": "#4287c8",
+            "intensity": 2.0
+        },
+        {
+            "name": "point2",
+            "type": "point",
+            "color": "#F5A340",
+            "intensity": 7.0
+        },
+        {
+            "name": "point3",
+            "type": "point",
+            "color": "#FF0000",
+            "intensity": 1.0
+        }
+    ],
+    "scenegraph": {
+        "name": "root",
+        "type": "node",
+        "transformation": {
+            "translation": [
+                0,
+                0,
+                0
+            ],
+            "rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ]
+        },
+        "children": [
+            {
+                "name": "lights_node",
+                "type": "node",
+                "children": [
+                    {
+                        "name": "ambientlight1",
+                        "type": "light",
+                        "content": "ambient1"
+                    },
+                    {
+                        "name": "directionallight1",
+                        "type": "light",
+                        "content": "directional1",
+                        "transformation": {
+                            "translation": [-1.5, 0, 0],
+                            "rotation": [15,15,175]
+                        }
+                    },
+                    {
+                        "name": "pointlight1",
+                        "type": "light",
+                        "content": "point1",
+                        "transformation": {
+                            "translation": [1, 1, 1]
+                        }
+                    },
+                    {
+                        "name": "pointlight2",
+                        "type": "light",
+                        "content": "point2",
+                        "transformation": {
+                            "translation": [1, -0.75, -1]
+                        }
+                    },
+                    {
+                        "name": "reddish_lights_node",
+                        "type": "node",
+                        "transformation": {
+                            "translation": [0, -0.8, 0]
+                        },
+                        "children": [
+                            {
+                                "name": "red_point1",
+                                "type": "light",
+                                "content": "point3",
+                                "transformation": {
+                                    "translation": [-0.5, 0.0, 0.5]
+                                }
+                            },
+                            {
+                                "name": "red_point2",
+                                "type": "light",
+                                "content": "point3",
+                                "transformation": {
+                                    "translation": [0.66, 0.0, 0.66]
+                                }
+                            },
+                            {
+                                "name": "red_point3",
+                                "type": "light",
+                                "content": "point3",
+                                "transformation": {
+                                    "translation": [-0.66, 0.0, -0.66]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "floor",
+                "type": "model",
+                "content": "platform",
+                "transformation": {
+                    "translation": [
+                        0,
+                        -1,
+                        0
+                    ],
+                    "rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "children": []
+            },
+            {
+                "name": "pedestal",
+                "type": "node",
+                "transformation": {
+                    "translation": [
+                        0.49291297793388367,
+                        -0.9584625363349915,
+                        -0.4912251830101013
+                    ],
+                    "rotation": [
+                        -0.002292762976490157,
+                        -0.38569110823351815,
+                        0.0007374912507360113,
+                        0.922624825362464
+                    ],
+                    "scale": [
+                        0.23875491533933815,
+                        0.2387542707059184,
+                        0.23875435317369
+                    ]
+                },
+                "children": [
+                    {
+                        "name": "pedestal_base",
+                        "type": "model",
+                        "content": "platform",
+                        "transformation": {
+                            "translation": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "rotation": [
+                                0,
+                                0,
+                                0,
+                                1
+                            ],
+                            "scale": [
+                                1.364928960800171,
+                                2.729857921600342,
+                                1.364928960800171
+                            ]
+                        },
+                        "children": []
+                    },
+                    {
+                        "name": "pedestal_body",
+                        "type": "model",
+                        "content": "platform",
+                        "transformation": {
+                            "translation": [
+                                0.02015523612499237,
+                                0.8712064623832703,
+                                -0.02142934501171112
+                            ],
+                            "rotation": [
+                                0,
+                                0,
+                                0,
+                                1
+                            ],
+                            "scale": [
+                                0.7394788265228271,
+                                36.97394561767578,
+                                0.7394788265228271
+                            ]
+                        },
+                        "children": []
+                    },
+                    {
+                        "name": "pedestal_god",
+                        "type": "model",
+                        "content": "happy",
+                        "transformation": {
+                            "translation": [
+                                0.23744840919971466,
+                                3.141665458679199,
+                                0.18043428659439087
+                            ],
+                            "rotation": [
+                                0,
+                                0,
+                                0,
+                                1
+                            ],
+                            "scale": [
+                                1.3855987787246704,
+                                1.3855987787246704,
+                                1.3855987787246704
+                            ]
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "worshippers",
+                "type": "node",
+                "transformation": {
+                    "translation": [
+                        -0.15587852895259857,
+                        -0.7356463074684143,
+                        -0.1571846753358841
+                    ],
+                    "rotation": [
+                        -0.5501804947901533,
+                        -0.2618608978201687,
+                        -0.25454571155866085,
+                        0.7509571909585447
+                    ],
+                    "scale": [
+                        0.22362439322610078,
+                        0.22362465545455626,
+                        0.2236244326249456
+                    ]
+                },
+                "children": [
+                    {
+                        "name": "worshipper_1",
+                        "type": "model",
+                        "content": "armadillo",
+                        "transformation": {
+                            "translation": [
+                                -2.1330130100250244,
+                                0.21656914055347443,
+                                -0.830947995185852
+                            ],
+                            "rotation": [
+                                -0.009593267251466697,
+                                -0.08285375246576507,
+                                -0.3684997645625268,
+                                0.9258785882941186
+                            ],
+                            "scale": [
+                                0.999999438749449,
+                                1.0000005920793495,
+                                0.9999993936074577
+                            ]
+                        },
+                        "children": []
+                    },
+                    {
+                        "name": "worshipper_2",
+                        "type": "model",
+                        "content": "armadillo",
+                        "transformation": {
+                            "translation": [
+                                -0.17206676304340363,
+                                0.014706429094076157,
+                                -0.622636079788208
+                            ],
+                            "rotation": [
+                                -0.013021770314796044,
+                                -0.052849791639250604,
+                                -0.27251466787639933,
+                                0.9606107918899845
+                            ],
+                            "scale": [
+                                0.9999991333600662,
+                                1.0000001810103252,
+                                1.0000001007329753
+                            ]
+                        },
+                        "children": []
+                    },
+                    {
+                        "name": "worshipper_3",
+                        "type": "model",
+                        "content": "armadillo",
+                        "transformation": {
+                            "translation": [
+                                2.1114349365234375,
+                                -0.01032816432416439,
+                                -0.3183412551879883
+                            ],
+                            "rotation": [
+                                -0.022714475449679045,
+                                0.01038253591744077,
+                                0.10641291698554506,
+                                0.9940083231477345
+                            ],
+                            "scale": [
+                                1.0000002978004947,
+                                1.000000290575139,
+                                1.0000008588605995
+                            ]
+                        },
+                        "children": []
+                    },
+                    {
+                        "name": "worshipper_4",
+                        "type": "model",
+                        "content": "armadillo",
+                        "transformation": {
+                            "translation": [
+                                4.273417949676514,
+                                0.013112209737300873,
+                                -0.06766583025455475
+                            ],
+                            "rotation": [
+                                -0.04338602670035413,
+                                0.03990347551928943,
+                                0.3032210810188568,
+                                0.9510953361547545
+                            ],
+                            "scale": [
+                                0.9999996788875595,
+                                1.0000003276549982,
+                                1.0000007074019575
+                            ]
+                        },
+                        "children": []
+                    },
+                    {
+                        "name": "worshipper_5",
+                        "type": "model",
+                        "content": "armadillo",
+                        "transformation": {
+                            "translation": [
+                                -1.3572659492492676,
+                                -2.139608383178711,
+                                -0.07935138046741486
+                            ],
+                            "rotation": [
+                                0.004116268052632489,
+                                -0.15311588240790114,
+                                -0.27052024042939926,
+                                0.9504511547128035
+                            ],
+                            "scale": [
+                                0.9999995558005046,
+                                1.0000013527368985,
+                                1.000000432001419
+                            ]
+                        },
+                        "children": []
+                    },
+                    {
+                        "name": "worshipper_6",
+                        "type": "model",
+                        "content": "armadillo",
+                        "transformation": {
+                            "translation": [
+                                1.122682809829712,
+                                -2.2371747493743896,
+                                0.12987110018730164
+                            ],
+                            "rotation": [
+                                -1.1781831066315362e-09,
+                                5.038153227943098e-10,
+                                -5.384614976122748e-10,
+                                1
+                            ],
+                            "scale": [
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        "children": []
+                    },
+                    {
+                        "name": "worshipper_7",
+                        "type": "model",
+                        "content": "armadillo",
+                        "transformation": {
+                            "translation": [
+                                3.6994199752807617,
+                                -2.298527956008911,
+                                0.33983147144317627
+                            ],
+                            "rotation": [
+                                -0.05447720622503154,
+                                0.08105414317689698,
+                                0.22725705821342954,
+                                0.9689255122517543
+                            ],
+                            "scale": [
+                                0.9999990285272908,
+                                0.9999963637745686,
+                                1.000002246559658
+                            ]
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}
