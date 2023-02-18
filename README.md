@@ -32,7 +32,7 @@ GPU Code (GLSL)
     * Implementing normal mapping using normal maps.
 
 ### The Starter Template
-The starter template contained six files assignment6.textured.(frag|vert).js, assignment6.mtlloader.js, assignment6.object3d.js, assignment6.objloader.js which contain empty classes and/or methods that need to be implemented.
+The starter template contained six files textured.(frag|vert).glsl, texture.js, mtlloader.js, object3d.js, objloader.js which contain empty classes and/or methods that need to be implemented.
 
 To help debug normals and normal mapping a toggle to visualize normals on the model has been added to the template. Holding "N" will result in seeing the scene's normals. Since we interpret normals as colors [x, y, z] -> [r, g, b], green will be 'up', red will be 'right', and blue will be 'forward'.
 * All normals are shown in world space unless changes made in the shader.
