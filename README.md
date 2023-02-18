@@ -2,7 +2,7 @@
 An app that can draw 3D models by loading, rendering and manipulating 3D scenes created using both JavaScript and GLSL. 
 
 ### Application Showcase
-[Video Showcase]() 
+[Video Showcase](https://youtu.be/vTtIt6tUCC0) 
 
 ![preview img](/phong.png)
 
