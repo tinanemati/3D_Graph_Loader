@@ -1,0 +1,87 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0;
+}
+
+a {
+    color: #CA3C25;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffecc2;
+}
+
+#header-container {
+    margin: 2vh;
+}
+
+.settings-container {
+    background-color: #fff8e9;
+    display: flex;
+    width: 100%;
+    padding: 0.25em;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.setting{
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin: 1em 2em;
+}
+
+.setting-item-container {
+    display: flex;
+    margin-top: 1em;
+    flex-direction: row;
+}
+
+.setting-item {
+    color: lightgray;
+    margin: 0 0.75em;
+}
+
+.setting-item.active {
+    color: #CA3C25;
+}
+
+
+#canvas {
+    aspect-ratio: 16 / 9;
+    height: 60vh;
+
+    overflow: scroll;
+    background-color: white;
+}
