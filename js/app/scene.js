@@ -1,11 +1,11 @@
 'use strict'
 
-import { ShadedObject3D } from "../../assignment6.object3d.js"
+import { ShadedObject3D } from "../../object3d.js"
 import { SHADER_MAX_LIGHTS, hex2rgb, json2transform } from "../utils/utils.js"
 import * as mat4 from "../lib/glmatrix/mat4.js"
 import * as quat4 from "../lib/glmatrix/quat.js"
 
-import { OBJLoader } from "../../assignment6.objloader.js"
+import { OBJLoader } from "../../objloader.js"
 import { Light, AmbientLight, DirectionalLight, PointLight } from "./light.js"
 
 

@@ -1,6 +1,6 @@
 'use strict'
 
-import Texture from '../../assignment6.texture.js'
+import Texture from '../../texture.js'
 
 /**
  * The Material class is used to store material properties for Shaded Objects

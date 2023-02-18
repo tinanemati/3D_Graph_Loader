@@ -2,7 +2,7 @@
 
 import { loadExternalFile, getFileDir } from './js/utils/utils.js'
 import Material from './js/app/material.js'
-import Texture from './assignment6.texture.js'
+import Texture from './texture.js'
 
 /**
  * A class to load MTL files from disk

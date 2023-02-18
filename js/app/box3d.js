@@ -1,6 +1,6 @@
 'use strict'
 
-import { Object3D } from '../../assignment6.object3d.js'
+import { Object3D } from '../../object3d.js'
 
 class Box extends Object3D {
 

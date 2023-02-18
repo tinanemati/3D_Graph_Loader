@@ -1,7 +1,7 @@
 'use strict'
 
 import { loadExternalFile, getFileDir } from './js/utils/utils.js'
-import { MTLLoader } from './assignment6.mtlloader.js'
+import { MTLLoader } from './mtlloader.js'
 import Material from './js/app/material.js'
 
 import * as vec3 from './js/lib/glmatrix/vec3.js'

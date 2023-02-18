@@ -23,7 +23,7 @@ class App
         this.shaders = [
             new Shader( this.gl, '../../shaders/unlit.vert.glsl', '../../shaders/unlit.frag.glsl' ),
             new Shader( this.gl, '../../shaders/phong.vert.glsl', '../../shaders/phong.frag.glsl' ),
-            new Shader( this.gl, '../../assignment6.textured.vert.glsl', '../../assignment6.textured.frag.glsl' ),
+            new Shader( this.gl, '../../textured.vert.glsl', '../../textured.frag.glsl' ),
             new Shader( this.gl, '../../shaders/lights.vert.glsl', '../../shaders/lights.frag.glsl' )
         ]
 

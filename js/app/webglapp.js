@@ -7,7 +7,7 @@ import * as mat4 from '../lib/glmatrix/mat4.js'
 import * as vec3 from '../lib/glmatrix/vec3.js'
 import * as quat from '../lib/glmatrix/quat.js'
 
-import { OBJLoader } from '../../assignment6.objloader.js'
+import { OBJLoader } from '../../objloader.js'
 import { Scene, SceneNode } from './scene.js'
 
 /**
